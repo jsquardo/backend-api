@@ -1,10 +1,25 @@
 {
-	"compilerOptions": {
-		"sourceMap": true,
-		"outDir": "dist",
-		"strict": true,
-		"lib": ["esnext"],
-		"esModuleInterop": true,
-		"types": ["node"]
-	}
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "types": ["node"],
+    "baseUrl": "./src" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@root/*": ["*"],
+      "@services/*": ["services/*"],
+      "@middlewares/*": ["middleware/*"],
+      "@utils/*": ["utils/*"],
+      "@configs/*": ["consfigs/*"],
+      "@models/*": ["models/*"],
+      "@controllers/*": ["controllers/*"],
+      "@routes/*": ["routes/*"]
+    }
+  },
+  "include": ["src/**/*.ts", ".eslintrc.js", "jest.config.js", "tsconfig.json"],
+  "exclude": ["node_modules"]
 }
