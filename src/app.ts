@@ -1,4 +1,4 @@
-import router from "@routes/index";
+import router from "@root/app.routes";
 /*  This import is used to resolve path aliases, since ts configuration is not enough for the built JS */
 import "./customImports";
 

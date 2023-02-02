@@ -1,14 +1,24 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": true,
+    "declarationDir": "dist/types",
     "strict": true,
-    "lib": ["esnext"],
+    "lib": ["es2022"],
+    "module": "commonjs",
+    "target": "es2022",
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "types": ["node"],
-    "baseUrl": "./src" /* Base directory to resolve non-absolute module names. */,
+    "baseUrl": "src" /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "@root/*": ["*"],
       "@services/*": ["services/*"],
@@ -20,6 +30,6 @@
       "@routes/*": ["routes/*"]
     }
   },
-  "include": ["src/**/*.ts", ".eslintrc.js", "jest.config.js", "tsconfig.json"],
+  "include": ["src/**/*.ts", "tsconfig.json"],
   "exclude": ["node_modules"]
 }
