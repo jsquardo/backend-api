@@ -1,7 +1,7 @@
 /*  This import is used to resolve path aliases, since ts configuration is not enough for the built JS */
 import "./customImports";
 
-import app from "@root/app";
+import app from "@/app";
 
 // Define the router with the /api/v1 prefix
 
