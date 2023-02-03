@@ -13,6 +13,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": false,
     "allowJs": true,
     "checkJs": true,
     "forceConsistentCasingInFileNames": true,
