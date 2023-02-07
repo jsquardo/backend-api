@@ -1,7 +1,7 @@
 {
   "name": "express-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "🚀 Express template for developing a REST API with Node.js, Express, Typescript, Prettier, Husky, Prisma, etc.",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --cls --exit-child src/index.ts",
@@ -15,8 +15,15 @@
       "prettier --ignore-unknown --write"
     ]
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "typescript",
+    "eslint",
+    "husky",
+    "prettier",
+    "docker"
+  ],
+  "author": "Johnny Squardo",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.10.0",
