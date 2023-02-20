@@ -1,4 +1,10 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders } from "axios";
+import axios, {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  RawAxiosRequestHeaders,
+  InternalAxiosRequestConfig,
+} from "axios";
 import winston from "winston";
 
 import logger from "@services/logger";
@@ -7,12 +13,13 @@ import { beautifyJson } from "@utils/json";
 /**
  * Axios client configuration
  */
+
 export interface AxiosClientParams {
   baseURL?: string;
   verbose?: boolean;
   debug?: boolean;
   throwsOnError?: boolean;
-  headers?: AxiosRequestHeaders;
+  headers: RawAxiosRequestHeaders;
   customLogger?: winston.Logger;
 }
 
@@ -76,7 +83,7 @@ export class AxiosClient {
       this.logger = logger;
     }
 
-    this.client.interceptors.request.use((request: AxiosRequestConfig) => {
+    this.client.interceptors.request.use((request: InternalAxiosRequestConfig) => {
       if (verbose || debug) {
         this.logger.info(
           `[Request] ${request.method?.toUpperCase()} - ${new URL(
