@@ -16,8 +16,11 @@ import path from "path";
  */
 moduleAlias.addAliases({
   "@root": __dirname,
+  "@configs": path.join(__dirname, "configs"),
+  "@controllers": path.join(__dirname, "controllers"),
   "@services": path.join(__dirname, "services"),
-  "@middlewares": path.join(__dirname, "middlewares"),
+  "@middleware": path.join(__dirname, "middleware"),
+  "@models": path.join(__dirname, "models"),
   "@utils": path.join(__dirname, "utils"),
   "@routes": path.join(__dirname, "routes"),
 });
